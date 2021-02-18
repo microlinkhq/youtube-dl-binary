@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "main": "src/index.js",
   "author": {
-    "email": "hello@microlink.io",
     "name": "microlink.io",
+    "email": "hello@microlink.io",
     "url": "https://microlink.io"
   },
   "repository": {
@@ -85,5 +85,11 @@
     "*.md": [
       "standard-markdown"
     ]
-  }
+  },
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    }
+  ]
 }
