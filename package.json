@@ -2,7 +2,7 @@
   "name": "youtube-dl-binary",
   "description": "Tiny tool for downloading the latest `youtube-dl` version available",
   "homepage": "https://nicedoc.io/microlinkhq/youtube-dl-binary",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "src/index.js",
   "author": {
     "email": "hello@microlink.io",
