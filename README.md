@@ -1,10 +1,29 @@
-# youtube-dl-binary
-
 <div align="center">
   <img src="https://cdn.microlink.io/logo/banner.png"">
 </div>
 
 > Tiny tool for downloading the latest `youtube-dl` version available.
+
+## Usage
+
+### As microservice
+
+Just query against youtube-dl-binary.vercel.app. Binary is cached every 24 hours.
+
+* for UNIX (Linux/Mac): [youtube-dl-binary.vercel.app](https://youtube-dl-binary.vercel.app)
+* for Windows: [youtube-dl-binary.vercel.app?platform=win](https://youtube-dl-binary.vercel.app?platform=win)
+
+### Node.js
+
+```
+const youtubeDlBinary = require('youtube-dl-binary)
+const got = require('got')
+const fs = require('fs)
+
+;(async () => {
+  got.stream(await youtubeDlBinary()).pipe(fs.createWriteStream('youtube-dl'))
+})()
+```
 
 ## License
 
