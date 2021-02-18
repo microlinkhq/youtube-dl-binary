@@ -23,7 +23,7 @@ npm install youtube-dl-binary
 
 Then you can interact with it
 
-```
+```js
 const youtubeDlBinary = require('youtube-dl-binary')
 const got = require('got')
 const fs = require('fs)
