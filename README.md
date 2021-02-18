@@ -6,17 +6,25 @@
 
 ## Usage
 
-### As microservice
+### Using as microservice
 
-Just query against youtube-dl-binary.vercel.app. Binary is cached every 24 hours.
+Just query against [youtube-dl-binary.vercel.app](https://youtube-dl-binary.vercel.app). Binary is cached every 24 hours.
 
 * for UNIX (Linux/Mac): [youtube-dl-binary.vercel.app](https://youtube-dl-binary.vercel.app)
 * for Windows: [youtube-dl-binary.vercel.app?platform=win](https://youtube-dl-binary.vercel.app?platform=win)
 
-### Node.js
+### Using at Node.js
+
+first install the module
+
+```bash
+npm install youtube-dl-binary
+```
+
+Then you can interact with it
 
 ```
-const youtubeDlBinary = require('youtube-dl-binary)
+const youtubeDlBinary = require('youtube-dl-binary')
 const got = require('got')
 const fs = require('fs)
 
