@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.js",
+      "src": "microservice.js",
       "use": "@vercel/node"
     }
   ],
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/src/index.js"
+      "dest": "/microservice.js"
     }
   ]
 }

@@ -1,15 +1,22 @@
 'use strict'
 
 const got = require('got')
-const ms = require('ms')
 
-const binaryUrl = require('./binary-url')
+const ENDPOINT =
+  'https://api.github.com/repos/ytdl-org/youtube-dl/releases?per_page=1'
 
-const ttl = ms('24h')
+module.exports = async ({ endpoint = ENDPOINT, platform = 'linux' } = {}) => {
+  const [lastRelease] = await got(endpoint, {
+    responseType: 'json',
+    resolveBodyOnly: true
+  })
 
-const cacheControl = `max-age=${ttl}, s-maxage=${ttl}, immutable, public`
+  const { assets } = lastRelease
 
-module.exports = async (req, res) => {
-  res.setHeader('Cache-Control', cacheControl)
-  return got.stream(await binaryUrl(req.query)).pipe(res)
+  const execName = platform === 'linux' ? 'youtube-dl' : 'youtube-dl.exe'
+  const { browser_download_url: downloadUrl } = assets.find(
+    ({ name }) => name === execName
+  )
+
+  return downloadUrl
 }
