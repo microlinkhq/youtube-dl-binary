@@ -2,7 +2,7 @@
   <img src="https://cdn.microlink.io/logo/banner.png"">
 </div>
 
-> Tiny tool for downloading the latest `youtube-dl` version available.
+> Tiny tool for pointing to the latest `youtube-dl` download URL available.
 
 ## Usage
 

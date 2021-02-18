@@ -1,6 +1,6 @@
 {
   "name": "youtube-dl-binary",
-  "description": "Tiny tool for downloading the latest `youtube-dl` version available",
+  "description": "Tiny tool for pointing to the latest `youtube-dl` download URL available.",
   "homepage": "https://nicedoc.io/microlinkhq/youtube-dl-binary",
   "version": "1.0.0",
   "main": "src/index.js",
